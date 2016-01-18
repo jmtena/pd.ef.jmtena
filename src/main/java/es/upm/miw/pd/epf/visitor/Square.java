@@ -2,20 +2,22 @@ package es.upm.miw.pd.epf.visitor;
 
 public class Square extends GeometricFigure{
 
-	public Square(String description){
+	private int side; 
+	
+	public Square(String description, int side){
 		super(description);
+		this.side = side;
+		this.numberOfSides = 4;
 	}
 
 	@Override
-	public void area() {
-		// TODO Auto-generated method stub
-		
+	public double area() {
+		return side*side;
 	}
 
 	@Override
-	public void numberOfSides() {
-		// TODO Auto-generated method stub
-		
+	public int numberOfSides() {
+		return this.numberOfSides;
 	}
 
 	@Override

@@ -7,12 +7,12 @@ public class VisitorMain {
     private Collection<Figure> coleccion = new ArrayList<Figure>();
 
     public VisitorMain() {
-        coleccion.add(new Triangle("T1"));
-        coleccion.add(new Triangle("T2"));
-        coleccion.add(new Triangle("T3"));
-        coleccion.add(new Square("S1"));
-        coleccion.add(new Square("S2"));
-        coleccion.add(new Circle("C1"));
+        coleccion.add(new Triangle("T1",3,2));
+        coleccion.add(new Triangle("T2",4,3));
+        coleccion.add(new Triangle("T3",2,5));
+        coleccion.add(new Square("S1",3));
+        coleccion.add(new Square("S2",4));
+        coleccion.add(new Circle("C1",1));
     }
 
     public void visitar() {
@@ -29,6 +29,6 @@ public class VisitorMain {
     }
 
     public static void main(String[] args) {
-        new VisitorMain().visitar();;
+        new VisitorMain().visitar();
     }
 }

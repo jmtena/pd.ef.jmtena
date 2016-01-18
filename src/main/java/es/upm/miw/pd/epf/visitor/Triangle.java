@@ -2,20 +2,24 @@ package es.upm.miw.pd.epf.visitor;
 
 public class Triangle extends GeometricFigure{
 	
-	public Triangle(String description){
+	private int base;
+	private int height;
+	
+	public Triangle(String description, int base, int height){
 		super(description);
+		this.base = base;
+		this.height = height;
+		this.numberOfSides = 3;
 	}
 
 	@Override
-	public void area() {
-		// TODO Auto-generated method stub
-		
+	public double area() {
+		return (base*height)/2;
 	}
 
 	@Override
-	public void numberOfSides() {
-		// TODO Auto-generated method stub
-		
+	public int numberOfSides() {
+		return numberOfSides;
 	}
 
 	@Override

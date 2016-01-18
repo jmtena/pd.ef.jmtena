@@ -2,7 +2,7 @@ package es.upm.miw.pd.epf.visitor;
 
 public interface Figure {
 	
-    void area();
-    void numberOfSides();
+    double area();
+    int numberOfSides();
     void accept(Visitor v);
 }

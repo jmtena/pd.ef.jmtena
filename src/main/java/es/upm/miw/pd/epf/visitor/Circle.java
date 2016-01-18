@@ -1,21 +1,23 @@
 package es.upm.miw.pd.epf.visitor;
 
 public class Circle extends GeometricFigure{
+	
+	private int radio;
 
-	public Circle(String description){
+	public Circle(String description, int radio){
 		super(description);
+		this.radio = radio;
+		this.numberOfSides = 0;
 	}
 
 	@Override
-	public void area() {
-		// TODO Auto-generated method stub
-		
+	public double area() {
+		return Math.PI*radio*radio;
 	}
 
 	@Override
-	public void numberOfSides() {
-		// TODO Auto-generated method stub
-		
+	public int numberOfSides() {
+		return this.numberOfSides;
 	}
 
 	@Override
