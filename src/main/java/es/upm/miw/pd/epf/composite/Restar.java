@@ -1,8 +1,6 @@
 package es.upm.miw.pd.epf.composite;
 
-public class Restar extends Expresion{
-	private Expresion valor1;
-	private Expresion valor2;
+public class Restar extends Operacion{
 	
 	public Restar(Expresion valor1, Expresion valor2){
 		this.valor1 = valor1;
@@ -18,4 +16,5 @@ public class Restar extends Expresion{
 	public String toString(){
 		return "(" + valor1 + "-" + valor2 + ")";
 	}
+	
 }
