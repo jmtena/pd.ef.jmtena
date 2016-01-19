@@ -1,13 +1,19 @@
 package es.upm.miw.pd.epf.store;
 
 public class Store {
+	//Creación temprana
+	private static final Store store = new Store();
 
     private State state;
     private Net net;
     
-    public Store(){
+    private Store(){
     	net = new Net();
     	state = new NetState(net);
+    }
+    
+    public static Store getStore(){
+    	return store;
     }
 
     // Se almacena un objeto

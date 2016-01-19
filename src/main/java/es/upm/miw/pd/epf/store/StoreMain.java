@@ -5,7 +5,7 @@ public class StoreMain {
 	private Store store;
 	
 	public StoreMain(){
-		store = new Store();
+		store = Store.getStore();
 	}
 	
 	private void write(String key, String value){
