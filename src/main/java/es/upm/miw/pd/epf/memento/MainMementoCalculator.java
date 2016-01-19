@@ -8,6 +8,7 @@ public class MainMementoCalculator {
 
     public MainMementoCalculator() {
         CalculatorMementable calculator = new CalculatorMementable();
+        this.mementoManager = new MementoManager<Memento>();
         this.commandManager = new CommandManager();
         this.commandManager.add(new AddCommand(calculator));
         this.commandManager.add(new SubstractCommand(calculator));
@@ -32,7 +33,7 @@ public class MainMementoCalculator {
         	value = io.readString("Nombre del memento");
         	if (isSaveOperation(key)){
         		Memento memento = (Memento)this.commandManager.execute(key,value);
-        		this.mementoManager.addMemento(key, memento);
+        		this.mementoManager.addMemento((String)value, memento);
         	}else{ //Undo
         		Memento memento = this.mementoManager.getMemento((String)value);
         		this.commandManager.execute(key,memento);
@@ -67,6 +68,10 @@ public class MainMementoCalculator {
     
     public static void main(String[] args) {
     	MainMementoCalculator calculadora = new MainMementoCalculator();
+    	calculadora.execute();
+    	calculadora.execute();
+    	calculadora.execute();
+    	calculadora.execute();
     	calculadora.execute();
     	calculadora.execute();
     	calculadora.execute();

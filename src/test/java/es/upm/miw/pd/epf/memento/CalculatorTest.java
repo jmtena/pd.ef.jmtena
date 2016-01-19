@@ -52,8 +52,6 @@ public class CalculatorTest {
 		commandManager.execute("Add", new Double(5));
 		commandManager.execute("Reset", null);
 		assertEquals(calculator.getTotal(),0,1e-10);
-	}
-	
-	
+	}	
 	
 }

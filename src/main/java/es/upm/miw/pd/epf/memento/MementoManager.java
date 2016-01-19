@@ -7,7 +7,7 @@ public class MementoManager<T> {
     private SortedMap<String, T> list = new TreeMap<String, T>();
 
     public void addMemento(String key, T memento) {
-        this.list.put(this.list.size() + ":" + key, memento);
+        this.list.put(key, memento);
     }
 
     public T getMemento(String key) {
